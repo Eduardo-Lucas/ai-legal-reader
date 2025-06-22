@@ -1,0 +1,33 @@
+services:
+  web:
+    build: .
+    container_name: legal-doc-analyzer
+    command: gunicorn legal_doc_analyzer.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app
+      - static_volume:/app/static
+      - media_volume:/app/media
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16
+    container_name: legal-doc-db
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-legaldoc}
+      POSTGRES_USER: ${POSTGRES_USER:-legaluser}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-legalpass}
+    ports:
+      - "5432:5432"
+
+volumes:
+  static_volume:
+  media_volume:
+  pgdata:

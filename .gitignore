@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+ENV/
+*.env
+
+# Django
+*.log
+*.pot
+*.mo
+db.sqlite3
+media/
+staticfiles/
+static_root/
+local_settings.py
+
+# Django translations cache
+*.py,cover
+locale/__pycache__/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+htmlcov/
+coverage.xml
+*.cover
+*.log
+.tox/
+
+# MyPy and Pyre
+.mypy_cache/
+.pyre/
+
+# Docker
+*.pid
+*.sock
+docker-compose.override.yml
+**/__pycache__/
+**/*.pyc
+
+# Node.js (if applicable for frontend static)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# PDFs or uploads
+uploads/
+documents/

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Chat with Document{% endblock %}
+{% block content %}
+    <h1>Chat with "{{ doc.file.name }}"</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="question" placeholder="Ask a question..." style="width: 60%;">
+        <button type="submit">Ask</button>
+    </form>
+
+    {% if answer %}
+        <h3>Answer:</h3>
+        <pre>{{ answer }}</pre>
+    {% endif %}
+
+    <h3>Document Summary:</h3>
+    <pre>{{ doc.summary }}</pre>
+
+    <a href="/">Upload another</a>
+{% endblock %}

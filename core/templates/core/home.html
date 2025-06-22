@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'core/css/home.css' %}">
+{% endblock %}
+
+{% block title %}{% trans "Welcome to Legal Doc Analyzer" %}{% endblock %}
+
+{% block content %}
+<div class="text-center mb-5">
+  <h1 class="display-4">{% trans "AI-Powered Legal Document Analyzer" %}</h1>
+  <p class="lead">
+    {% trans "Simplify your legal workflows with automated document analysis, summarization, and keyword extraction using cutting-edge AI tools." %}
+  </p>
+</div>
+
+<div class="row g-4 mb-5">
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <img src="{% static 'core/images/futuristic-ai-robot-writing-essay-chat-bot-assistant-with-pen-homework-help-blurred-background_174533-32062.avif' %}" class="card-img-top" alt="{% trans 'Legal Documents' %}">
+      <div class="card-body">
+        <h5 class="card-title">{% trans "Analyze Legal PDFs" %}</h5>
+        <p class="card-text">
+          {% trans "Upload legal documents (PDFs), and let our AI extract and summarize the key terms and clauses for you." %}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <img src="{% static 'core/images/close-up-lawyer-ai-robot_23-2151015327.avif' %}" class="card-img-top" alt="{% trans 'AI Tools' %}">
+      <div class="card-body">
+        <h5 class="card-title">{% trans "Powered by AI" %}</h5>
+        <p class="card-text">
+          {% trans "Our system uses OpenAI's GPT and LangChain to deliver intelligent and contextual legal insights." %}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <img src="{% static 'core/images/gettyimages-157585743-612x612.jpg' %}" class="card-img-top" alt="{% trans 'Law Office' %}">
+      <div class="card-body">
+        <h5 class="card-title">{% trans "Built for Law Offices" %}</h5>
+        <p class="card-text">
+          {% trans "Designed for legal professionals, law firms, and paralegals seeking efficiency and accuracy." %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="card bg-dark text-white shadow-lg border-info mx-auto" style="max-width: 500px;">
+    <div class="card-body text-center">
+      <i class="fas fa-cloud-upload-alt fa-3x text-info mb-3"></i>
+      <h4 class="card-title">{% trans "Ready to Analyze?" %}</h4>
+      <p class="card-text">{% trans "Upload your legal PDF to start AI-powered analysis and summarization." %}</p>
+      <a href="{% url 'analyzer:upload_document' %}" class="btn btn-info btn-lg mt-2">
+        <i class="fas fa-file-upload me-1"></i> {% trans "Get Started" %}
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
