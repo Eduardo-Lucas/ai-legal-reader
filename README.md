@@ -25,16 +25,16 @@ AI Legal Reader is a secure, multilingual web platform designed to **analyze leg
 
 ## 🧱 Tech Stack
 
-| Layer          | Technology                        |
-|----------------|------------------------------------|
+| Layer          | Technology                           |
+|----------------|--------------------------------------|
 | Backend        | Django 4.2.9 + Django REST Framework |
-| AI/LLM         | LangChain `0.0.352` + OpenAI API   |
-| Frontend       | Bootstrap 5 + FontAwesome          |
-| Vector Store   | FAISS (in-memory index)            |
-| PDF Parsing    | PyPDF2                             |
-| DataViz        | Plotly + Pandas                    |
-| Authentication | Django built-in auth (email-based)|
-| Deployment     | Docker + Gunicorn + PostgreSQL     |
+| AI/LLM         | LangChain `0.0.352` + OpenAI API     |
+| Frontend       | Bootstrap 5 + FontAwesome            |
+| Vector Store   | FAISS (in-memory index)              |
+| PDF Parsing    | PyPDF2                               |
+| DataViz        | Plotly + Pandas                      |
+| Authentication | Django built-in auth (email-based)   |
+| Deployment     | Docker + Gunicorn + PostgreSQL       |
 
 ---
 
@@ -191,7 +191,7 @@ gunicorn project.wsgi:application --bind 0.0.0.0:$PORT
 
 Eduardo Lucas
 Senior Python/Django Developer
-[LinkedIn](https://linkedin.com/in/eduadolucas40)
+[LinkedIn](linkedin.com/in/eduadolucas40)
 
 ---
 
